@@ -1,7 +1,7 @@
 <section class="flex-parent">
-  <h1>10</h1>
+  <h1>{{ contador }}</h1>
   <div class="botones">
-    <button class="btn btn-primary" >Incrementar</button>
-    <button class="btn btn-success" >Decrementar</button>
+    <button class="btn btn-primary" (click)="incrementar()">Incrementar</button>
+    <button class="btn btn-success" (click)="decrementar()">Decrementar</button>
   </div>
 </section>

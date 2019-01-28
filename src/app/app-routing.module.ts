@@ -7,6 +7,10 @@ const routes: Routes = [
     path:'', 
     component: PadreComponent,
   },
+  { 
+    path:'padre', 
+    component: PadreComponent,
+  },
   { path: '**', component: PadreComponent }
 ];
 
