@@ -14,6 +14,7 @@ export enum contadorACTION{
 export const INCREMENTAR = 'INCREMENTAR';
 export const DECREMENTAR = 'DECREMENTAR';
 export const MULTIPLICAR = 'MULTIPLICAR';
+export const DIVIDIR = 'DIVIDIR';
 
 export class IncrementarAction implements Action{
     readonly type: string = INCREMENTAR;
@@ -25,6 +26,12 @@ export class DecrementarAction implements Action{
 
 export class MultiplicarAction implements Action{
     readonly type: string = MULTIPLICAR;
+    constructor(public payload: number){
+    }
+}
+
+export class DividirAction implements Action{
+    readonly type: string = DIVIDIR;
     constructor(public payload: number){
     }
 }
