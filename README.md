@@ -13,3 +13,5 @@ mediante un store de NGRX y ejecutan cambios mediante un REDUCER
 
 
 
+
+<img src="https://github.com/SeniorFlacko/ComunicacionRedux/blob/master/src/contadore.JPG">
