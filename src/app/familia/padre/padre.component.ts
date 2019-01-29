@@ -15,9 +15,9 @@ export class PadreComponent implements OnInit {
   private contador : number;
 
   constructor(private store: Store<IAPPSTATE>) { 
-    this.store.subscribe(state => {
-      this.contador = state.contador;
-      console.log(`El estado cambio ... ${state.contador}`);
+    this.store.select('contador').subscribe(contador => {
+      this.contador = contador;
+      console.log(`El estado cambio ... ${contador}`);
     });
   }
 
