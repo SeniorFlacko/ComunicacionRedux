@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IAPPSTATE, multiplicarAction } from '../contador.action';
+import { IAPPSTATE, MultiplicarAction } from '../contador.action';
 import { Store } from '@ngrx/store';
 
 @Component({
@@ -22,8 +22,7 @@ export class HijoComponent implements OnInit {
   }
 
   multiplicar(){
-    console.log('hello');
-    const accion = new multiplicarAction(3);
+    const accion = new MultiplicarAction(3);
     this.store.dispatch(accion);
   }
   

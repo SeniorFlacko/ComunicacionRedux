@@ -1,5 +1,6 @@
 import { Action } from "@ngrx/store";
 
+
 export interface IAPPSTATE{
     contador: number
 }
@@ -10,20 +11,25 @@ export enum contadorACTION{
     MULTIPLICAR = 'MULTIPLICAR',
 }
 
-export class incrementarAction implements Action{
-    readonly type: string = contadorACTION.INCREMENTAR;
+export const INCREMENTAR = 'INCREMENTAR';
+export const DECREMENTAR = 'DECREMENTAR';
+export const MULTIPLICAR = 'MULTIPLICAR';
+
+export class IncrementarAction implements Action{
+    readonly type: string = INCREMENTAR;
 }
 
-export class decrementarAction implements Action{
-    readonly type: string = contadorACTION.DECREMENTAR;
+export class DecrementarAction implements Action{
+    readonly type: string = DECREMENTAR;
 }
 
-export class multiplicarAction implements Action{
-    readonly type: string = contadorACTION.MULTIPLICAR;
-    constructor(public payload: number){}
+export class MultiplicarAction implements Action{
+    readonly type: string = MULTIPLICAR;
+    constructor(public payload: number){
+    }
 }
 
 
 
-export type actions = incrementarAction | decrementarAction | multiplicarAction;
+export type actions = MultiplicarAction | IncrementarAction | DecrementarAction;
 

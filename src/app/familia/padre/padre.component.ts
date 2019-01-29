@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, Action } from '@ngrx/store';
-import { incrementarAction, decrementarAction } from '../contador.action';
+import { IncrementarAction, DecrementarAction } from '../contador.action';
 
 interface IAPPSTATE{
   contador: number
@@ -29,7 +29,7 @@ export class PadreComponent implements OnInit {
     //   type: 'INCREMENTAR'
     // }
 
-    const incrementarActn = new incrementarAction();
+    const incrementarActn = new IncrementarAction();
     this.store.dispatch(incrementarActn);
     
   }
@@ -39,7 +39,7 @@ export class PadreComponent implements OnInit {
     //   type: 'DECREMENTAR'
     // }
 
-    const decrementarActn = new decrementarAction();
+    const decrementarActn = new DecrementarAction();
     this.store.dispatch(decrementarActn);
 
   }
