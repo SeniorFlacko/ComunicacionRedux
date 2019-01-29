@@ -12,7 +12,7 @@ interface IAPPSTATE{
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent implements OnInit {
-  private contador : number;
+  public contador : number;
 
   constructor(private store: Store<IAPPSTATE>) { 
     this.store.select('contador').subscribe(contador => {

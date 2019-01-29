@@ -8,7 +8,7 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./nieto.component.css']
 })
 export class NietoComponent implements OnInit {
-  private contador: number;
+  public contador: number;
   
   constructor(private store: Store<IAPPSTATE>) { 
     this.store.select('contador').subscribe(contador =>{
